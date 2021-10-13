@@ -1,0 +1,84 @@
+private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        int num = Integer.parseInt(txtNum.getValue().toString());
+        
+                //resto
+                int r = num % 2; 
+                        lblResto1.setText(Integer.toString(r));
+                  // elevado ao cubo
+                  double c = Math.pow(num ,3);
+                  lblCubo1.setText(Double.toString(c));
+                  
+                  // raiz quadrada
+                  double rq = Math.sqrt(num);
+                  lblRaizQ1.setText(String.format("%.4f" , rq));
+                  
+                  //raiz cubica
+                  double rc = Math.cbrt(num);
+                  lblRaizC1.setText(String.format("%2f",rc));
+                  
+                  //valor absoluto
+                  int abs = Math.abs(num);
+                  lblAbs1.setText(Integer.toString(abs));
+                          
+                  
+                  
+                  
+                      
+                        
+        PanCalc.setVisible(true)
+    }                                       
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new tela().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JPanel PanCalc;
+    private javax.swing.JButton btnCalc;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel lblAbs;
+    private javax.swing.JLabel lblAbs1;
+    private javax.swing.JLabel lblCubo;
+    private javax.swing.JLabel lblCubo1;
+    private javax.swing.JLabel lblRaizC;
+    private javax.swing.JLabel lblRaizC1;
+    private javax.swing.JLabel lblRaizQ;
+    private javax.swing.JLabel lblRaizQ1;
+    private javax.swing.JLabel lblResto;
+    private javax.swing.JLabel lblResto1;
+    private javax.swing.JSpinner txtNum;
+    // End of variables declaration                   
+}
