@@ -1,0 +1,7 @@
+int ano = Integer.parseInt(txtano.getText());
+        int idade = 2021 - ano;
+        lblidade.setText(Integer.toString(idade));
+        String sit = (idade >= 18) ? "Maior": "Menor";
+        lblsituacao.setText(sit);
+        
+        
